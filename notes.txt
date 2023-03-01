@@ -1,0 +1,5 @@
+just some notes and ideas for the site
+
+
+
+to make player not go backwards maybe do that they cant press the opposite key
