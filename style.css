@@ -14,7 +14,16 @@ nav {
     width: 50%;
     display: flex;
     justify-content: space-around;
-    margin-left: 30em;
+    margin-left: 25%;
+}
+
+.textContent {
+    font-size: 25px;
+    margin: 45% 0;
+}
+
+.faqContent {
+    margin-bottom: 10em;
 }
 
 #navButton {
