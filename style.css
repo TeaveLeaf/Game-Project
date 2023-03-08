@@ -20,9 +20,17 @@ nav {
 #navButton {
     border: 0;
     background-color: transparent;
-    color:#c6c8d3;
+    color: black;
     text-decoration: none;
     margin-top: 24px;
+}
+
+a:hover#navButton {
+    text-decoration: underline;
+}
+
+a:visited#navButton {
+    color: black;
 }
 
 #gamebrd {
