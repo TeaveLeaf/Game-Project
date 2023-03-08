@@ -22,12 +22,11 @@ nav {
 #navButton {
     border: 0;
     background-color: transparent;
-    color:#c6c8d3;
+    color: black;
     text-decoration: none;
     margin-top: 24px;
 }
 
-/* GAMEBOARD */
 #gamebrd {
     margin-top: 2em;
 }
