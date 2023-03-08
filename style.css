@@ -27,13 +27,19 @@ nav {
     margin-top: 24px;
 }
 
+a:hover#navButton {
+    text-decoration: underline;
+}
+
+a:visited#navButton {
+    color: black;
+}
+
 #gamebrd {
     margin-top: 2em;
 }
 
-.gameboard {
-    background-color: #ffe8e8;
-}
+
 
 /* TESTS */
 .test {
