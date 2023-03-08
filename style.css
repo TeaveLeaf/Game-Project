@@ -28,6 +28,10 @@ nav {
     margin-bottom: 10em;
 }
 
+li {
+    margin: 2%;
+}
+
 #navButton {
     border: 0;
     background-color: transparent;
