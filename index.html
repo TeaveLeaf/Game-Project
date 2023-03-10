@@ -19,7 +19,7 @@
         </div>
     </nav>
     <div id="gamebrd" class="gameboard">
-        <div class="startScreen">
+        <div id="startgm" class="startScreen">
             <label for="PlayerAmount">How many players are playing?</label>
             <select name="PlayerAmount" id="dropdown">
                 <option>2</option>
@@ -31,8 +31,10 @@
                 <option>Yes</option>
                 <option>No</option>
             </select>
+            <div id="space"></div>
+            <button id="startGame" onclick="visibility()">Start Game</button>
         </div>
-        <div class="playerboard">
+        <div id="playerbrd" class="playerboard">
             <div class="p1">
                 <h2 id="player1">Player 1</h2>
                 <p>Coins: </p>
@@ -54,7 +56,7 @@
                 <p>Cards: </p>
             </div>
         </div>
-        <div class="board">
+        <div id="board" class="board">
             
         </div>
     </div>
@@ -83,9 +85,6 @@
             </ul>
         </div>
     </div>
-
-    <button id="tete" onclick="visibility()">Test</button>
-    <div id="wha" class="test"></div>
 
 
 </body>

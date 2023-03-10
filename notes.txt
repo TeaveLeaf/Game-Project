@@ -5,3 +5,8 @@ just some notes and ideas for the site
 to make player not go backwards maybe do that they cant press the opposite key
 
 to keep track of turns yadda yadda every turn add 1 then reset back to 0 after the last player (player 4)
+
+
+red block disappearing test code
+    <button id="tete" onclick="visibility()">Test</button>
+    <div id="wha" class="test"></div>
