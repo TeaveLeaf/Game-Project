@@ -116,8 +116,11 @@ a:visited#navButton {
 
 /* TEXT CONTENT */
 .textContent {
-    font-size: 25px;
+    /* background-color: rgb(255, 205, 205); */
+    width: 80%;
+    font-size: 19px;
     margin: 5% 0;
+    margin-left: 10%;
 }
 
 .faqContent {
