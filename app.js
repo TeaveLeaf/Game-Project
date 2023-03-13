@@ -3,6 +3,7 @@
 let board = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 
 
+
 //function makes thingy appear and or disappear
 function visibility() {
     var x = document.getElementById("startgm");
