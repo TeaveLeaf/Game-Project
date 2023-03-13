@@ -137,7 +137,7 @@ a:visited#navButton {
     width: 13%;
     height: 20%;
   }
-
+  
 /* THE ACTUAL GAME BOARD WHERE PLAYERS WILL PLAY */
 .board {
     background-color: rgb(167, 142, 190);
