@@ -1,12 +1,5 @@
 
 
-// trying to make the board ?? idk what im doing
-
-// let board = [red,blue,red,blue,red,blue,red,blue,red,blue,red,blue,red,blue,red,blue];
-
-// var red = document.getElementById("test");
-// var blue = document.getElementById("test2");
-
 let board = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 
 
