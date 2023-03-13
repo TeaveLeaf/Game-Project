@@ -4,7 +4,7 @@ let board = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 
 
 
-//function makes thingy appear and or disappear
+//Function makes thingy appear and or disappear
 function visibility() {
     var x = document.getElementById("startgm");
     var y = document.getElementById("playerbrd");
@@ -17,4 +17,11 @@ function visibility() {
       y.style.display = "flex";
       z.style.display = "flex";
     }
+  }
+
+  //Dice roll function
+  function diceRoll(){
+    var num;
+    num = Math.floor(Math.random()*7)+1;
+    document.getElementById("diceShow2").innerHTML = num;
   }
