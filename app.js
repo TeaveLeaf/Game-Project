@@ -17,11 +17,16 @@ function visibility() {
       y.style.display = "flex";
       z.style.display = "flex";
     }
-  }
+}
 
-  //Dice roll function
+//Dice roll function
   function diceRoll(){
     var num;
     num = Math.floor(Math.random()*6)+1;
     document.getElementById("diceShow2").innerHTML = num;
+}
+
+//Card deck function
+  function cardDeck(){
+    //FINISH LATER
   }

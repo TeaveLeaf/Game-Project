@@ -178,6 +178,11 @@ h1 {
     padding-top: 0.3em;
 }
 
+#cardDeck {
+    width: 15em;
+    height: 25em;
+}
+
 
 /* TEXT CONTENT */
 .textContent {
