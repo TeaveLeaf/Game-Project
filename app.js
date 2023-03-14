@@ -1,6 +1,6 @@
 
 
-let board = [0,0,0,0];
+let board = [0,0,0,0,0];
 
 
 
@@ -25,7 +25,6 @@ function visibility() {
     num = Math.floor(Math.random()*6)+1;
     document.getElementById("diceShow2").innerHTML = num;
 }
-
 
 
 
