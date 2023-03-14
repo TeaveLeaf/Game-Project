@@ -26,7 +26,47 @@ function visibility() {
     document.getElementById("diceShow2").innerHTML = num;
 }
 
+
+
+
 //Card deck function
-  function cardDeck(){
-    //FINISH LATER
-  }
+function cardDeck(){
+    let cardsList = ["Card 1", "Card 2", "Card 3"];
+    var displ = document.getElementById("cardDis");
+    var car1 = document.getElementById("card1");
+    var car2 = document.getElementById("card2");
+    var car3 = document.getElementById("card3");
+    var rando;
+    var num2;
+    displ.style.display = "none";
+    car1.style.display = "none";
+    car2.style.display = "none";
+    car3.style.display = "none";
+    num2 = Math.floor(Math.random()*3);
+    rando = cardsList[num2];
+    if (rando == "Card 1") {
+      if (car1.style.display === "none") {
+        displ.style.display="block";
+        car1.style.display = "block";
+      } else {
+        displ.style.display="none";
+        car1.style.display = "none";
+      }
+    } else if (rando == "Card 2") {
+      if (car2.style.display === "none") {
+        displ.style.display="block";
+        car2.style.display = "block";
+      } else {
+        displ.style.display="none";
+        car2.style.display = "none";
+      }
+    } else if (rando == "Card 3") {
+      if (car3.style.display === "none") {
+        displ.style.display="block";
+        car3.style.display = "block";
+      } else {
+        displ.style.display="none";
+        car3.style.display = "none";
+      }
+    }
+}
