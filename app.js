@@ -15,7 +15,7 @@ function visibility() {
     } else {
       x.style.display = "none";
       y.style.display = "flex";
-      z.style.display = "flex";
+      z.style.display = "block";
     }
 }
 

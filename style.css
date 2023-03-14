@@ -166,9 +166,6 @@ h1 {
     background-color: aqua;
     width: 5em;
     height: 5em;
-    /* display: flex;
-    justify-content: space-between;
-    flex-direction: row; */
 }
 
 .pb1,
@@ -176,6 +173,10 @@ h1 {
 .pb3 {
     padding-left: 1em;
     padding-top: 0.3em;
+}
+
+.cardStuff {
+    padding-top: 15.4%;
 }
 
 #cardDeck {
