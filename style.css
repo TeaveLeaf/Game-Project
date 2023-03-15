@@ -92,8 +92,7 @@ h1 {
 /* CARDS FOR EACH PLAYER */
 #container1 {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    border-radius: 5px;
-    border-radius: 5px 5px 0 0;
+    border: 1px solid black;
   }
 
   .cards {
@@ -215,8 +214,8 @@ h1 {
 
 #spot {
     background-color: rgb(229, 192, 192);
-    width: 5em;
-    height: 5em;
+    width: 2em;
+    height: 2em;
     border: 1px solid black;
 }
 
@@ -230,8 +229,8 @@ h1 {
 
 .startSpot {
     background-color: red;
-    width: 5em;
-    height: 5em;
+    width: 2em;
+    height: 2em;
     border: 1px solid black;
 }
 
