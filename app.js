@@ -28,6 +28,8 @@ function visibility() {
 
 
 
+let cardList = ["Card1", "Card2", "Card3", "Card4", "Card5"];
+
 //Card deck function
 function cardDeck(){
     let cardsList = ["Card 1", "Card 2", "Card 3"];
