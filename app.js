@@ -1,6 +1,31 @@
 
 
-let board = [0,0,0,0,0];
+// let boardData = [
+//   [0, 0, 0],
+//   [0, 0, 0],
+//   [0, 0, 0]
+// ];
+
+// let player = 1;
+
+// const cellElements = document.querySelectorAll(".cell");
+
+// cellElements.forEach((cell, index) => {
+//   cell.addEventListener("click", () => {
+//     console.log(index);
+//   });
+// });
+
+// // console.log(cellElements);
+
+// function palceMarker(index) {
+//   let col = index % 3
+//   let row = (index - col) / 3
+//   // if(boardData[row][col] ==0)
+//   boardData[row][col] = 1;
+//   player *= -1;
+//   console.log(boardData)
+// }
 
 
 
