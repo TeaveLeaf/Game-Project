@@ -176,6 +176,20 @@ h1 {
     padding-top: 0.3em;
 }
 
+.coins {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 27%;
+}
+
+.cardsNum {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 27%;
+}
+
 /* REMOVED but im keeping it just in case */
 /* .cardStuff {
     /* padding-top: 13.8%;

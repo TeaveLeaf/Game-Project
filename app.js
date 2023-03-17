@@ -1,31 +1,13 @@
 
 
-// let boardData = [
-//   [0, 0, 0],
-//   [0, 0, 0],
-//   [0, 0, 0]
-// ];
+let boardData = [
+  [0, 0, 0],
+  [0, 0, 0],
+  [0, 0, 0]
+];
 
-// let player = 1;
 
-// const cellElements = document.querySelectorAll(".cell");
-
-// cellElements.forEach((cell, index) => {
-//   cell.addEventListener("click", () => {
-//     console.log(index);
-//   });
-// });
-
-// // console.log(cellElements);
-
-// function palceMarker(index) {
-//   let col = index % 3
-//   let row = (index - col) / 3
-//   // if(boardData[row][col] ==0)
-//   boardData[row][col] = 1;
-//   player *= -1;
-//   console.log(boardData)
-// }
+console.log(boardData);
 
 
 
@@ -42,6 +24,7 @@ function visibility() {
       y.style.display = "flex";
       z.style.display = "block";
     }
+    console.log("Game started");
 }
 
 //Dice roll function
@@ -49,13 +32,15 @@ function visibility() {
     var num;
     num = Math.floor(Math.random()*6)+1;
     document.getElementById("diceShow2").innerHTML = num;
+    console.log("Dice Rolled");
 }
 
 
 
-let cardList = ["Card1", "Card2", "Card3", "Card4", "Card5"];
 
-//Card deck function
+
+//Card deck function -- not using
+let cardList = ["Card1", "Card2", "Card3", "Card4", "Card5"];
 function cardDeck(){
     let cardsList = ["Card 1", "Card 2", "Card 3"];
     var displ = document.getElementById("cardDis");
@@ -99,3 +84,35 @@ function cardDeck(){
 
 
 
+
+
+
+
+
+//code from a tut
+// let player = 1;
+
+// const cellElements = document.querySelectorAll(".cell");
+
+// cellElements.forEach((cell, index) => {
+//   cell.addEventListener("click", () => {
+//     console.log(index);
+//   });
+// });
+
+// // console.log(cellElements);
+// function palceMarker(index) {
+//   let col = index % 3
+//   let row = (index - col) / 3
+//   // if(boardData[row][col] ==0)
+//   boardData[row][col] = 1;
+//   player *= -1;
+//   console.log("boardData")
+// }
+
+
+// let player = 1;
+
+// const cellElements = document.getElementsByClassName(".cell");
+
+// console.log(boardData);
