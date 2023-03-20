@@ -1,55 +1,12 @@
-function setup() {
-  create(400,400);
-
-  let resolution = 100;
-  let cols = width / resolution;
-  let rows = height / resolution;
-  
-  let x = 0;
-  let y = (rows-1)*resolution;
-  for (let i = 0; i < cols * rows; i++) {
-    let tile = new Tile(100, 100, resolution, i + 1);
-    tiles.push(tile);
-    x = x + (resolution * dir);
-    if (x >= width) {
-      x -= resolution;
-      y -= resolution;
-      dir *= -1;
-    }
-    if (x <= 0) {
-      x = resolution;
-      y -= resolution;
-      dir *= -1;
-    }
-  }
-
-
-}
-
-function draw() {
-  background(51);
-
-  for (let tile of tiles){
-    tile.show();
-  }
-
-}
+let boardData = [
+  [0, 0, 0],
+  [0, 0, 0],
+  [0, 0, 0]
+];
 
 
 
 
-
-
-
-// let boardData = [
-//   [0, 0, 0],
-//   [0, 0, 0],
-//   [0, 0, 0]
-// ];
-
-
-
-// var boardIndex = 0;
 
 
 
@@ -132,8 +89,10 @@ function cardDeck(){
 
 
 
+// different ways ive tried making the gameboard that did not work
 
-//code from a tut
+
+//codes r mostly from tuts, idk why i am not understanding
 // let player = 1;
 
 // const cellElements = document.querySelectorAll(".cell");
@@ -172,3 +131,64 @@ function cardDeck(){
 
 //   square.addEventListener('mouseover', () => setColor)
 // }
+
+
+
+// function setup() {
+//   create(400,400);
+
+//   let resolution = 100;
+//   let cols = width / resolution;
+//   let rows = height / resolution;
+  
+//   let x = 0;
+//   let y = (rows-1)*resolution;
+//   for (let i = 0; i < cols * rows; i++) {
+//     let tile = new Tile(100, 100, resolution, i + 1);
+//     tiles.push(tile);
+//     x = x + (resolution * dir);
+//     if (x >= width) {
+//       x -= resolution;
+//       y -= resolution;
+//       dir *= -1;
+//     }
+//     if (x <= 0) {
+//       x = resolution;
+//       y -= resolution;
+//       dir *= -1;
+//     }
+//   }
+
+
+// }
+
+// function draw() {
+//   background(51);
+
+//   for (let tile of tiles){
+//     tile.show();
+//   }
+
+// }
+
+// let boardData = [
+//   [0, 0, 0],
+//   [0, 0, 0],
+//   [0, 0, 0]
+// ];
+
+
+
+// var boardIndex = 0;
+
+
+
+// let normalArray= [0,1,2,3,4,5,6,7,8];
+// let multiArray = [[0,1,2],[3,4,5],[6,7,8]];
+// let multiArray = [
+//     [0,1,2],
+//     [3,4,5],
+//     [6,7,8]
+// ];
+
+// objectTest.data = stuff;    what ?? D:
