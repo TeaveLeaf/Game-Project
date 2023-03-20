@@ -10,3 +10,6 @@ to keep track of turns yadda yadda every turn add 1 then reset back to 0 after t
 red block disappearing test code
     <button id="tete" onclick="visibility()">Test</button>
     <div id="wha" class="test"></div>
+
+changes the class name
+document.getElementById("cell1").className = "cell purpal";

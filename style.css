@@ -398,15 +398,31 @@ background-image: url(grid.png);
 background-size: cover;
 }
 
-.testBoard:hover {
+/* .testBoard:hover {
     cursor: pointer;
-}
+} */
 
 .purpal {
     background-image: url(purp.png);
-    background-size: 80%;
+    background-size: 20%;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.orang {
+    background-image: url(orang.png);
+    background-size: 20%;
+    margin-top: 28px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.purorang {
+    background-image: url(purp.png), url(orang.png);
+    background-size: 20%;
+    height: 50%;
+    background-position: center top, center bottom;
+    background-repeat: no-repeat, no-repeat;
 }
 
 
