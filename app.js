@@ -1,15 +1,25 @@
+// let boardData = [
+//   [1, 0, 0],
+//   [0, 2, 0],
+//   [0, 0, 0]
+// ];
+
 let boardData = [
-  [1, 0, 0],
-  [0, 2, 0],
-  [0, 0, 0]
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
 ];
 
 let start = 1;
 let block = 2;
-let purple = boardData[0][0];
-let orange = boardData[0][0];
+// let purple = boardData[0][0];
+// let orange = boardData[0][0];
+
+let purpMove;
 
 
+//Test to see if it actually shows the data -- works
+console.log(boardData[2][2]);
 
 
 var num;
@@ -19,7 +29,20 @@ function diceRoll(){
   document.getElementById("diceShow2").innerHTML = num;
   console.log("Dice Rolled");
   console.log("Dice got: " + num);
-  movement();
+  purpMove = num;
+  console.log("Purple needs to move: " + purpMove);
+  move();
+}
+
+function move () {
+  let first = 0;
+  let sec = 0;
+  // if(purpMove <= 5) {
+  //   for (let i = 0; i < 2; i++) {
+  //     first = first + 1;
+  //     console.log("WA" + first);
+  //   }
+  // }
 }
 
 
