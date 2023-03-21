@@ -22,7 +22,7 @@
 // let boardSides = [0, 1, 0];
 // let boardBottom = [0, 0, 0];
 
-let boardData = [3,0,0,0,0,0,0,0,0];
+let boardData = [0,0,0,0,0,0,0,0];
 
 let multPlays = 3;
 let purple = 1;
@@ -56,63 +56,82 @@ function diceRoll(){
   document.getElementById("diceShow2").innerHTML = num;
   console.log("Dice Rolled");
   console.log("Dice got: " + num);
+  movement();
 }
 
 function movement() {
-  purpPos = boardData[num];
+  var ab = 0;
+  var one = 1;
+  for (let i = 0; i < num; i++){
+    ab = ab + 1;
+    console.log("ab is " + ab);
+  }
+  purpMove = boardData[ab];
+  boardData.splice(boardData[ab],boardData[ab], one);
+  console.log(purpMove);
+  updateBoard();
 }
 
+// purPos = boardData[i]; //Switching through boardData
+//     if(i = 7){
+//       purPos = boardData[0];
+//     }
+//     console.log("End result is: " + i);
+
+
+
+//Updates the board and moves players to their respective places
 function updateBoard() {
+  if(boardData[0] == 1){
+    document.getElementById("cell1").className = "cell purpal";
+  } else if(boardData[1] == 1){
+    document.getElementById("cell2").className = "cell purpal";
+  } else if(boardData[2] == 1){
+    document.getElementById("cell3").className = "cell purpal";
+  } else if(boardData[3] == 1){
+    document.getElementById("cell4").className = "cell purpal";
+  } else if(boardData[4] == 1){
+    document.getElementById("cell5").className = "cell purpal";
+  } else if(boardData[5] == 1){
+    document.getElementById("cell6").className = "cell purpal";
+  } else if(boardData[6] == 1){
+    document.getElementById("cell7").className = "cell purpal";
+  } else if(boardData[7] == 1){
+    document.getElementById("cell8").className = "cell purpal";
+  }
+  if(boardData[0] == 2){
+    document.getElementById("cell1").className = "cell orang";
+  } else if(boardData[1] == 2){
+    document.getElementById("cell2").className = "cell orang";
+  } else if(boardData[2] == 2){
+    document.getElementById("cell3").className = "cell orang";
+  } else if(boardData[3] == 2){
+    document.getElementById("cell4").className = "cell orang";
+  } else if(boardData[4] == 2){
+    document.getElementById("cell5").className = "cell orang";
+  } else if(boardData[5] == 2){
+    document.getElementById("cell6").className = "cell orang";
+  } else if(boardData[6] == 2){
+    document.getElementById("cell7").className = "cell orang";
+  } else if(boardData[7] == 2){
+    document.getElementById("cell8").className = "cell orang";
+  }
   if(boardData[0] == 3){
     document.getElementById("cell1").className = "cell purorang";
-  } else if(boardData[2] == 3){
+  } else if(boardData[1] == 3){
     document.getElementById("cell2").className = "cell purorang";
-  } else if(boardData[3] == 3){
+  } else if(boardData[2] == 3){
     document.getElementById("cell3").className = "cell purorang";
-  } else if(boardData[4] == 3){
+  } else if(boardData[3] == 3){
     document.getElementById("cell4").className = "cell purorang";
-  } else if(boardData[5] == 3){
+  } else if(boardData[4] == 3){
     document.getElementById("cell5").className = "cell purorang";
-  } else if(boardData[6] == 3){
+  } else if(boardData[5] == 3){
     document.getElementById("cell6").className = "cell purorang";
-  } else if(boardData[7] == 3){
+  } else if(boardData[6] == 3){
     document.getElementById("cell7").className = "cell purorang";
-  } else if(boardData[8] == 3){
+  } else if(boardData[7] == 3){
     document.getElementById("cell8").className = "cell purorang";
-  }
-  if(boardData[1] == 1){
-    document.getElementById("cell1").className = "cell purp";
-  } else if(boardData[2] == 1){
-    document.getElementById("cell2").className = "cell purp";
-  } else if(boardData[3] == 1){
-    document.getElementById("cell3").className = "cell purp";
-  } else if(boardData[4] == 1){
-    document.getElementById("cell4").className = "cell purp";
-  } else if(boardData[5] == 1){
-    document.getElementById("cell5").className = "cell purp";
-  } else if(boardData[6] == 1){
-    document.getElementById("cell6").className = "cell purp";
-  } else if(boardData[7] == 1){
-    document.getElementById("cell7").className = "cell purp";
-  } else if(boardData[8] == 1){
-    document.getElementById("cell8").className = "cell purp";
-  }
-  if(boardData[1] == 2){
-    document.getElementById("cell1").className = "cell orang";
-  } else if(boardData[2] == 2){
-    document.getElementById("cell2").className = "cell orang";
-  } else if(boardData[3] == 2){
-    document.getElementById("cell3").className = "cell orang";
-  } else if(boardData[4] == 2){
-    document.getElementById("cell4").className = "cell orang";
-  } else if(boardData[5] == 2){
-    document.getElementById("cell5").className = "cell orang";
-  } else if(boardData[6] == 2){
-    document.getElementById("cell6").className = "cell orang";
-  } else if(boardData[7] == 2){
-    document.getElementById("cell7").className = "cell orang";
-  } else if(boardData[8] == 2){
-    document.getElementById("cell8").className = "cell orang";
   }
 }
 
