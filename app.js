@@ -143,9 +143,10 @@ function Omovement() { //WORKS IT WORKS MOSTLY WOOHOO
   updateBoard();
 }
 
-//Draw card function yay oh wow woohoo so fun
+//Draw card function oh yay wow woohoo so fun
 function drawCard() {
   randoDraw = Math.floor(Math.random()*6)+1;
+  
 }
 
 

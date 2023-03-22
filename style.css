@@ -402,6 +402,7 @@ background-size: cover;
     cursor: pointer;
 } */
 
+/* PLAYER STUFF */
 .purpal {
     background-image: url(purp.png);
     background-size: 20%;
@@ -426,13 +427,14 @@ background-size: cover;
 }
 
 
-/* PLAYER STUFF */
-.player1 {
-    background-color: rgb(128, 73, 238);
-    width: 3em;
-    height: 3em;
-    position: absolute;
+.cardDraw {
+    /* background-color: gray;
+    width: 2em;
+    height: 5em; */
 }
+
+
+
 
 
 /* TEXT CONTENT */
