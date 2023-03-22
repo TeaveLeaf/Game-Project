@@ -48,9 +48,13 @@ let c8 = document.getElementById("cell8");
 
 //Sound that plays when the buttons and dropdown menus are clicked
 
-function playAudio() {
-  let dropdownClick = new Audio ('menu-click.mp3');
-  dropdownClick.play();
+let dropdownClick = document.getElementById(dropdown);
+
+dropdown.addEventListener("click",'function'); {
+  let selectedOption = dropdown.option;
+  let audioURL = audioURLs[selectedOption];
+  menuButton1 = audioURL;
+  menuButton1.play();
 }
 
 //Test to see if it actually shows the data -- works
