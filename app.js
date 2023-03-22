@@ -22,16 +22,16 @@
 // let boardSides = [0, 1, 0];
 // let boardBottom = [0, 0, 0];
 
-let boardData = [0,0,0,0,0,0,0,0];
+let boardData = [3,0,0,0,0,0,0,0];
 
-let multPlays = 3;
-let purple = 1;
-let orang = 2;
+let multPlays = "a";
+let purple = "b";
+let orang = "c";
 
 let purpData = 0; //Start at (0,0)
 let orangData = 0;
 
-let purpMove;
+let purpMove = 0;
 let purPos = 0;
 
 let turns = [0, 1];
@@ -59,24 +59,27 @@ function diceRoll(){
   movement();
 }
 
-function movement() {
-  var ab = 0;
-  var one = 1;
-  for (let i = 0; i < num; i++){
-    ab = ab + 1;
-    console.log("ab is " + ab);
+function movement() { //WORKS IT WORKS MOSTLY WOOHOO
+  console.log("hihi the num is " + num);
+  console.log("purpmove is " + purpMove);
+  let testy = 0;
+  console.log("testy is " + testy);
+  for (let i = 0; i < 8; i++){
+    if(testy == num && purpMove < 9) { //if testy is equal to num and pm less than 9 no add
+      purpMove = purpMove + 0;
+      testy = testy + 0;
+    } else if(testy == num && purpMove >= 9) { //if testy = num and bigger than 9 pm = 0
+      purpMove = 0;
+      testy = 0;
+    } else { //if not equal to num just add
+      purpMove = purpMove + 1;
+      testy = testy + 1;
+    }
+    console.log("inside the for " + purpMove);
   }
-  purpMove = boardData[ab];
-  boardData.splice(boardData[ab],boardData[ab], one);
-  console.log(purpMove);
-  updateBoard();
-}
+  console.log("outside the for " + purpMove);
 
-// purPos = boardData[i]; //Switching through boardData
-//     if(i = 7){
-//       purPos = boardData[0];
-//     }
-//     console.log("End result is: " + i);
+}
 
 
 
@@ -432,3 +435,30 @@ function cardDeck(){
 //   console.log(purSpace);
 //   console.log(boardNum);
 // }
+
+  // var ab = 0;
+  // var one = 1;
+  // for (let i = 0; i < num; i++){
+  //   ab = ab + 1;
+  //   console.log("ab is " + ab);
+
+  //   console.log("Board data is " + boardData[ab]);
+  //   purpMove = boardData[ab];
+  //   boardData.pop();
+  //   boardData.splice(boardData[ab],boardData[ab], "a");
+  //   console.log(purpMove);
+  //   updateBoard();
+  // }
+  
+  // var sub ='';
+  // purpMove = purpMove + num;
+  // sub = 
+  // if(purpMove >= 9){
+  //   purpMove = 0
+  // }
+
+  // purPos = boardData[i]; //Switching through boardData
+//     if(i = 7){
+//       purPos = boardData[0];
+//     }
+//     console.log("End result is: " + i);
