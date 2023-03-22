@@ -46,6 +46,13 @@ let c6 = document.getElementById("cell6");
 let c7 = document.getElementById("cell7");
 let c8 = document.getElementById("cell8");
 
+//Sound that plays when the buttons and dropdown menus are clicked
+
+function playAudio() {
+  let dropdownClick = new Audio ('menu-click.mp3');
+  dropdownClick.play();
+}
+
 //Test to see if it actually shows the data -- works
 console.log(boardData[2][2]);
 
