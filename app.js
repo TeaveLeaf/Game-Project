@@ -127,7 +127,7 @@ function Omovement() {
 // console.log("card thinguy");
 // drawCard();
 //Draw card function oh yay wow woohoo so fun
-function drawCard() { //WCurrently working on, doesn't work properly
+function drawCard() { //Currently working on, doesn't work properly
   let card1 = document.getElementById("cardD1");
   let card2 = document.getElementById("cardD2");
   let card3 = document.getElementById("cardD3");
