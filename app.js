@@ -52,14 +52,22 @@ let c8 = document.getElementById("cell8");
 
 //Sound that plays when the buttons and dropdown menus are clicked
 
-let dropdownClick = document.getElementById(dropdown);
 
-dropdown.addEventListener("click",'function'); {
-  let selectedOption = dropdown.option;
-  let audioURL = audioURLs[selectedOption];
-  menuButton1 = audioURL;
-  menuButton1.play();
-}
+
+  // <-- // Attempts at sound playing that did not work
+
+
+  // let dropdownClick = document.getElementById(dropdown);
+
+  // dropdown.addEventListener("click",'function'); {
+  //   let selectedOption = dropdown.option;
+  //   let audioURL = audioURLs[selectedOption];
+  //   menuButton1 = audioURL;
+  //   menuButton1.play();
+  // }
+
+
+
 
 //Test to see if it actually shows the data -- works
 console.log(boardData[2][2]);
@@ -70,15 +78,18 @@ console.log(boardData[2][2]);
 var num;
 //Dice roll function
 function diceRoll(){
+  let diceRollSound = new Audio ("Sounds/dice-roll.mp3");
   num = Math.floor(Math.random()*6)+1;
   document.getElementById("diceShow2").innerHTML = num;
   console.log("Dice rolled a " + num);
   if(turns == 0){
-    console.log("OURPLE");
+    console.log("PURPLE");
     Pmovement();
+    diceRollSound.play();
   } else if(turns == 1){
     console.log("ORANGE");
     Omovement();
+    diceRollSound.play();
   }
 }
 
@@ -228,6 +239,7 @@ function visibility() {
     var start = document.getElementById("startgm");
     var playerBrd = document.getElementById("playerbrd");
     var board = document.getElementById("board");
+    let buttonClick = new Audio("Sounds/menu-click.mp3");
     if (start.style.display === "none") {
       start.style.display = "block";
       board.style.display = "none";
@@ -235,6 +247,7 @@ function visibility() {
       start.style.display = "none";
       playerBrd.style.display = "flex";
       board.style.display = "block";
+      buttonClick.play();
     }
     console.log("Game started");
     updateBoard();
