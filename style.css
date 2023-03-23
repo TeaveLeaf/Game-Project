@@ -378,6 +378,7 @@ h1 {
 }
 
 .pathway {
+    /* background-color: rgb(227, 176, 176); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -426,14 +427,52 @@ background-size: cover;
     background-repeat: no-repeat, no-repeat;
 }
 
-
 .cardDraw {
-    /* background-color: gray;
-    width: 2em;
-    height: 5em; */
+    background-color: gray;
+    width: 10em;
+    height: 15em;
+    margin-left: 3em;
+    margin-top: 2em;
+    position: absolute;
+    display: none;
+}
+
+.cbContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 10%;
+    position: absolute;
+    margin-left: 3.7em;
+    margin-top: 18em;
+}
+
+.save {
+    background-color: rgb(214, 153, 153);
+}
+
+.use {
+    background-color: rgb(131, 131, 179);
+}
+
+#cardButs {
+    width: 4em;
+    height: 4em;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border: 0;
 }
 
 
+/* MAKING THE MOUSE DO POINTER STUFF */
+#cardButs:hover{
+    cursor: pointer;
+}
+
+#dice:hover{
+    cursor: pointer;
+}
 
 
 

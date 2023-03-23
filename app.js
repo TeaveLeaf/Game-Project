@@ -1,32 +1,7 @@
-
-
-// let boardNum = [
-//   [1, 2, 3],
-//   [4, 5, 6],
-//   [7, 8, 9]
-// ];
-
-
-// let boardData = [
-//   [1, 2, 3],
-//   [4, 5, 6],
-//   [7, 8, 9]
-// ];
-
-// let start = 1;
-// let block = 2;
-// let purple = boardData[0][0];
-// let orange = boardData[0][0];
-
-// let boardTop = [0, 0, 0];
-// let boardSides = [0, 1, 0];
-// let boardBottom = [0, 0, 0];
-
 let boardData = [1,2,3,4,5,6,7,8];
 
-// let multPlays = 0;
-// let purple = "b";
-// let orang = "c";
+let cardsList = [1,2,3,4,5,6];
+
 
 let purpData = 0;
 let orangData = 0;
@@ -50,6 +25,8 @@ let c6 = document.getElementById("cell6");
 let c7 = document.getElementById("cell7");
 let c8 = document.getElementById("cell8");
 
+
+
 //Sound that plays when the buttons and dropdown menus are clicked
 
 function playAudio() {
@@ -57,8 +34,6 @@ function playAudio() {
   dropdownClick.play();
 }
 
-//Test to see if it actually shows the data -- works
-console.log(boardData[2][2]);
 
 
 
@@ -76,6 +51,7 @@ function diceRoll(){
     console.log("ORANGE");
     Omovement();
   }
+  drawCard();
 }
 
 function Pmovement() { //WORKS IT WORKS MOSTLY WOOHOO
@@ -105,13 +81,14 @@ function Pmovement() { //WORKS IT WORKS MOSTLY WOOHOO
     }
   }
   console.log("Purple has moved");
+
   console.log("Purple's turn over");
   turns = 1;
   updateBoard();
 }
 
 
-function Omovement() { //WORKS IT WORKS MOSTLY WOOHOO
+function Omovement() {
   // console.log("hihi the num is " + num);
   // console.log("purpmove is " + purpMove);
   let testy2 = 0;
@@ -143,11 +120,88 @@ function Omovement() { //WORKS IT WORKS MOSTLY WOOHOO
   updateBoard();
 }
 
+// console.log("card thinguy");
+// drawCard();
 //Draw card function oh yay wow woohoo so fun
 function drawCard() {
+  let card1 = document.getElementById("cardD1");
+  let card2 = document.getElementById("cardD2");
+  let card3 = document.getElementById("cardD3");
+  let card4 = document.getElementById("cardD4");
+  let card5 = document.getElementById("cardD5");
+  let card6 = document.getElementById("cardD6");
+  let cardButtons = document.getElementById("cardButs");
+  let randoDraw = 0;
   randoDraw = Math.floor(Math.random()*6)+1;
-  
+  console.log(randoDraw);
+  if(randoDraw == 1){
+   if(card1.style.display === "none"){
+    card1.style.display = "block";
+   } else {
+    card1.style.display = "none";
+   }
+  } else if(randoDraw == 2){
+    if(card2.style.display === "none"){
+     card2.style.display = "block";
+    } else {
+     card2.style.display = "none";
+    }
+  } else if(randoDraw == 3){
+    if(card3.style.display === "none"){
+     card3.style.display = "block";
+    } else {
+     card3.style.display = "none";
+    }
+  } else if(randoDraw == 4){
+    if(card4.style.display === "none"){
+     card4.style.display = "block";
+    } else {
+     card4.style.display = "none";
+    }
+  } else if(randoDraw == 5){
+    if(card5.style.display === "none"){
+     card5.style.display = "block";
+    } else {
+     card5.style.display = "none";
+    }
+  } else if(randoDraw == 6){
+    if(card6.style.display === "none"){
+     card6.style.display = "block";
+    } else {
+     card6.style.display = "none";
+    }
+  }
+  if (cardButtons.style.display === "none") {
+    cardButtons.style.display = "flex";
+  }else {
+    cardButtons.style.display = "none";
+  }
 }
+
+
+
+//Function makes thingy appear and or disappear
+function visibility() {
+    var start = document.getElementById("startgm");
+    var playerBrd = document.getElementById("playerbrd");
+    var board = document.getElementById("board");
+    if (start.style.display === "none") {
+      start.style.display = "block";
+      board.style.display = "none";
+    } else {
+      start.style.display = "none";
+      playerBrd.style.display = "flex";
+      board.style.display = "block";
+    }
+    console.log("Game started");
+    updateBoard();
+}
+
+
+
+
+
+
 
 
 
@@ -204,41 +258,18 @@ function updateBoard() {
     document.getElementById("cell2").className = "cell purorang";
   } else if(purpMove == 3 && orangMove == 3) {
     document.getElementById("cell3").className = "cell purorang";
-  } else if(purpMove == 3 && orangMove == 3) {
+  } else if(purpMove == 4 && orangMove == 4) {
     document.getElementById("cell3").className = "cell purorang";
-  } else if(purpMove == 3 && orangMove == 3) {
+  } else if(purpMove == 5 && orangMove == 5) {
     document.getElementById("cell3").className = "cell purorang";
-  } else if(purpMove == 3 && orangMove == 3) {
+  } else if(purpMove == 6 && orangMove == 6) {
     document.getElementById("cell3").className = "cell purorang";
-  } else if(purpMove == 3 && orangMove == 3) {
+  } else if(purpMove == 7 && orangMove == 7) {
     document.getElementById("cell3").className = "cell purorang";
-  } else if(purpMove == 3 && orangMove == 3) {
+  } else if(purpMove == 8 && orangMove == 8) {
     document.getElementById("cell3").className = "cell purorang";
   }
 }
-
-
-
-//Function makes thingy appear and or disappear
-function visibility() {
-    var start = document.getElementById("startgm");
-    var playerBrd = document.getElementById("playerbrd");
-    var board = document.getElementById("board");
-    if (start.style.display === "none") {
-      start.style.display = "block";
-      board.style.display = "none";
-    } else {
-      start.style.display = "none";
-      playerBrd.style.display = "flex";
-      board.style.display = "block";
-    }
-    console.log("Game started");
-    updateBoard();
-}
-
-
-
-
 
 
 //Card deck function -- not using
@@ -283,58 +314,3 @@ function cardDeck(){
       }
     }
 }
-
-
-
-
-  //if(boardData[0] == 1){
-  //   document.getElementById("cell1").className = "cell purpal";
-  // } else if(boardData[1] == 1){
-  //   document.getElementById("cell2").className = "cell purpal";
-  // } else if(boardData[2] == 1){
-  //   document.getElementById("cell3").className = "cell purpal";
-  // } else if(boardData[3] == 1){
-  //   document.getElementById("cell4").className = "cell purpal";
-  // } else if(boardData[4] == 1){
-  //   document.getElementById("cell5").className = "cell purpal";
-  // } else if(boardData[5] == 1){
-  //   document.getElementById("cell6").className = "cell purpal";
-  // } else if(boardData[6] == 1){
-  //   document.getElementById("cell7").className = "cell purpal";
-  // } else if(boardData[7] == 1){
-  //   document.getElementById("cell8").className = "cell purpal";
-  // }
-  // if(boardData[0] == 2){
-  //   document.getElementById("cell1").className = "cell orang";
-  // } else if(boardData[1] == 2){
-  //   document.getElementById("cell2").className = "cell orang";
-  // } else if(boardData[2] == 2){
-  //   document.getElementById("cell3").className = "cell orang";
-  // } else if(boardData[3] == 2){
-  //   document.getElementById("cell4").className = "cell orang";
-  // } else if(boardData[4] == 2){
-  //   document.getElementById("cell5").className = "cell orang";
-  // } else if(boardData[5] == 2){
-  //   document.getElementById("cell6").className = "cell orang";
-  // } else if(boardData[6] == 2){
-  //   document.getElementById("cell7").className = "cell orang";
-  // } else if(boardData[7] == 2){
-  //   document.getElementById("cell8").className = "cell orang";
-  // }
-  // if(boardData[0] == 3){
-  //   document.getElementById("cell1").className = "cell purorang";
-  // } else if(boardData[1] == 3){
-  //   document.getElementById("cell2").className = "cell purorang";
-  // } else if(boardData[2] == 3){
-  //   document.getElementById("cell3").className = "cell purorang";
-  // } else if(boardData[3] == 3){
-  //   document.getElementById("cell4").className = "cell purorang";
-  // } else if(boardData[4] == 3){
-  //   document.getElementById("cell5").className = "cell purorang";
-  // } else if(boardData[5] == 3){
-  //   document.getElementById("cell6").className = "cell purorang";
-  // } else if(boardData[6] == 3){
-  //   document.getElementById("cell7").className = "cell purorang";
-  // } else if(boardData[7] == 3){
-  //   document.getElementById("cell8").className = "cell purorang";
-  // }
