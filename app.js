@@ -11,12 +11,15 @@ let purPos = 0;
 
 let orangMove = 1;
 
+let grenMove = 1;
+
 let toge = 0;
 
 let turns = 0;
 
 let pCards = 0;
 let oCards = 0;
+let gCards = 0;
 
 let c1 = document.getElementById("cell1");
 let c2 = document.getElementById("cell2");
@@ -34,17 +37,17 @@ let c8 = document.getElementById("cell8");
 
 
 
-  // <-- // Attempts at sound playing that did not work
+// <-- // Attempts at sound playing that did not work
 
 
-  // let dropdownClick = document.getElementById(dropdown);
+// let dropdownClick = document.getElementById(dropdown);
 
-  // dropdown.addEventListener("click",'function'); {
-  //   let selectedOption = dropdown.option;
-  //   let audioURL = audioURLs[selectedOption];
-  //   menuButton1 = audioURL;
-  //   menuButton1.play();
-  // }
+// dropdown.addEventListener("click",'function'); {
+//   let selectedOption = dropdown.option;
+//   let audioURL = audioURLs[selectedOption];
+//   menuButton1 = audioURL;
+//   menuButton1.play();
+// }
 
 
 
@@ -67,6 +70,10 @@ function diceRoll(){
   } else if(turns == 1){
     console.log("ORANGE");
     Omovement();
+    diceRollSound.play();
+  } else if(turns == 3){
+    console.log("GREEN");
+    Gmovement();
     diceRollSound.play();
   }
 }
@@ -98,36 +105,12 @@ function Pmovement() { //WORKS IT WORKS MOSTLY WOOHOO
   pCards = pCards + num;
   document.getElementById("p1Coins").innerHTML = pCards;
 
-  // var con1 = document.getElementsByClassName("card1-player1");
-  // var con2 = document.getElementsByClassName("card2-player1");
-  // var con3 = document.getElementsByClassName("card3-player1");
-  // var con4 = document.getElementsByClassName("card4-player1");
-  // var con5 = document.getElementsByClassName("card5-player1");
-
-  // let prandom = 0;
-  // prandom = Math.floor(Math.random()*6)+1;
-
-  // if(prandom == num){
-  //   pCards = pCards + 1;
-  // }
-
-  // if(pCards == 1){
-  //   con1.style.backgroundColor = "blue";
-  // }
-  // if(pCards == 2){
-  //   con2.style.backgroundColor = "blue";
-  // }
-  // if(pCards == 3){
-  //   con3.style.backgroundColor = "blue";
-  // }
-  // if(pCards == 4){
-  //   con4.style.backgroundColor = "blue";
-  // }
-  // if(pCards == 5){
-  //   con5.style.backgroundColor = "blue";
-  // }
-
   console.log("Purple has moved");
+
+  if(pCards == 50){
+    console.log("PURPLE LOSESS");
+  }
+
   console.log("Purple's turn over");
   turns = 1;
   updateBoard();
@@ -159,36 +142,45 @@ function Omovement() {
   }
 
   oCards = oCards + num;
-  document.getElementById("p2Coins").innerHTML = pCards;
+  document.getElementById("p2Coins").innerHTML = oCards;
 
-  // var con1 = document.getElementsByClassName("card1-player1");
-  // var con2 = document.getElementsByClassName("card2-player1");
-  // var con3 = document.getElementsByClassName("card3-player1");
-  // var con4 = document.getElementsByClassName("card4-player1");
-  // var con5 = document.getElementsByClassName("card5-player1");
+  console.log("Orange has moved");
 
-  // let orandom = 0;
-  // orandom = Math.floor(Math.random()*6)+1;
+  if(oCards == 50){
+    console.log("ORANGE LOSESS");
+  }
 
-  // if(orandom == num){
-  //   oCards = oCards + 1;
-  // }
+  console.log("Orange's turn over");
+  turns = 0;
+  updateBoard();
+}
 
-  // if(oCards == 1){
-  //   con1.style.backgroundColor = "blue";
-  // }
-  // if(oCards == 2){
-  //   con2.style.backgroundColor = "blue";
-  // }
-  // if(oCards == 3){
-  //   con3.style.backgroundColor = "blue";
-  // }
-  // if(oCards == 4){
-  //   con4.style.backgroundColor = "blue";
-  // }
-  // if(oCards == 5){
-  //   con5.style.backgroundColor = "blue";
-  // }
+function Gmovement() {
+  // console.log("hihi the num is " + num);
+  // console.log("purpmove is " + purpMove);
+  let testy3 = 0;
+  // console.log("testy is " + testy);
+  for (let i = 0; i < 8; i++){
+    if(testy3 == num && grenMove < 9) { //if testy is equal to num and pm less than 9 no add
+      grenMove = grenMove + 0;
+      testy3 = testy3 + 0;
+      console.log("A testy is " + testy3);
+      console.log("A pm is " + grenMove);
+    } else if(testy3 == num && grenMove >= 9) { //if testy = num and bigger than 9 pm = 0
+      grenMove = 1;
+      testy3 = 0;
+      console.log("B testy is " + testy3);
+      console.log("B pm is " + grenMove);
+    } else { //if not equal to num just add
+      grenMove = grenMove + 1;
+      testy3 = testy3 + 1;
+      console.log("C testy is " + testy3);
+      console.log("C pm is " + grenMove);
+    }
+  }
+
+  gCards = gCards + num;
+  document.getElementById("p3Coins").innerHTML = gCards;
 
   console.log("Orange has moved");
   console.log("Orange's turn over");
