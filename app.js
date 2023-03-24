@@ -15,6 +15,9 @@ let toge = 0;
 
 let turns = 0;
 
+let pCards = 0;
+let oCards = 0;
+
 let c1 = document.getElementById("cell1");
 let c2 = document.getElementById("cell2");
 let c3 = document.getElementById("cell3");
@@ -55,7 +58,6 @@ function diceRoll(){
     console.log("ORANGE");
     Omovement();
   }
-  drawCard();
 }
 
 function Pmovement() { //WORKS IT WORKS MOSTLY WOOHOO
@@ -69,23 +71,52 @@ function Pmovement() { //WORKS IT WORKS MOSTLY WOOHOO
       testy = testy + 0;
       console.log("A testy is " + testy);
       console.log("A pm is " + purpMove);
-      updateBoard();
     } else if(testy == num && purpMove >= 9) { //if testy = num and bigger than 9 pm = 0
       purpMove = 1;
       testy = 0;
       console.log("B testy is " + testy);
       console.log("B pm is " + purpMove);
-      updateBoard();
     } else { //if not equal to num just add
       purpMove = purpMove + 1;
       testy = testy + 1;
       console.log("C testy is " + testy);
       console.log("C pm is " + purpMove);
-      updateBoard();
     }
   }
-  console.log("Purple has moved");
 
+  pCards = pCards + num;
+  document.getElementById("p1Coins").innerHTML = pCards;
+
+  // var con1 = document.getElementsByClassName("card1-player1");
+  // var con2 = document.getElementsByClassName("card2-player1");
+  // var con3 = document.getElementsByClassName("card3-player1");
+  // var con4 = document.getElementsByClassName("card4-player1");
+  // var con5 = document.getElementsByClassName("card5-player1");
+
+  // let prandom = 0;
+  // prandom = Math.floor(Math.random()*6)+1;
+
+  // if(prandom == num){
+  //   pCards = pCards + 1;
+  // }
+
+  // if(pCards == 1){
+  //   con1.style.backgroundColor = "blue";
+  // }
+  // if(pCards == 2){
+  //   con2.style.backgroundColor = "blue";
+  // }
+  // if(pCards == 3){
+  //   con3.style.backgroundColor = "blue";
+  // }
+  // if(pCards == 4){
+  //   con4.style.backgroundColor = "blue";
+  // }
+  // if(pCards == 5){
+  //   con5.style.backgroundColor = "blue";
+  // }
+
+  console.log("Purple has moved");
   console.log("Purple's turn over");
   turns = 1;
   updateBoard();
@@ -103,21 +134,51 @@ function Omovement() {
       testy2 = testy2 + 0;
       console.log("A testy is " + testy2);
       console.log("A pm is " + orangMove);
-      updateBoard();
     } else if(testy2 == num && orangMove >= 9) { //if testy = num and bigger than 9 pm = 0
       orangMove = 1;
       testy2 = 0;
       console.log("B testy is " + testy2);
       console.log("B pm is " + orangMove);
-      updateBoard();
     } else { //if not equal to num just add
       orangMove = orangMove + 1;
       testy2 = testy2 + 1;
       console.log("C testy is " + testy2);
       console.log("C pm is " + orangMove);
-      updateBoard();
     }
   }
+
+  oCards = oCards + num;
+  document.getElementById("p2Coins").innerHTML = pCards;
+
+  // var con1 = document.getElementsByClassName("card1-player1");
+  // var con2 = document.getElementsByClassName("card2-player1");
+  // var con3 = document.getElementsByClassName("card3-player1");
+  // var con4 = document.getElementsByClassName("card4-player1");
+  // var con5 = document.getElementsByClassName("card5-player1");
+
+  // let orandom = 0;
+  // orandom = Math.floor(Math.random()*6)+1;
+
+  // if(orandom == num){
+  //   oCards = oCards + 1;
+  // }
+
+  // if(oCards == 1){
+  //   con1.style.backgroundColor = "blue";
+  // }
+  // if(oCards == 2){
+  //   con2.style.backgroundColor = "blue";
+  // }
+  // if(oCards == 3){
+  //   con3.style.backgroundColor = "blue";
+  // }
+  // if(oCards == 4){
+  //   con4.style.backgroundColor = "blue";
+  // }
+  // if(oCards == 5){
+  //   con5.style.backgroundColor = "blue";
+  // }
+
   console.log("Orange has moved");
   console.log("Orange's turn over");
   turns = 0;
@@ -127,60 +188,63 @@ function Omovement() {
 // console.log("card thinguy");
 // drawCard();
 //Draw card function oh yay wow woohoo so fun
-function drawCard() { //Currently working on, doesn't work properly
-  let card1 = document.getElementById("cardD1");
-  let card2 = document.getElementById("cardD2");
-  let card3 = document.getElementById("cardD3");
-  let card4 = document.getElementById("cardD4");
-  let card5 = document.getElementById("cardD5");
-  let card6 = document.getElementById("cardD6");
-  let cardButtons = document.getElementById("cardButs");
-  let randoDraw = 0;
-  randoDraw = Math.floor(Math.random()*6)+1;
-  console.log(randoDraw);
-  if(randoDraw == 1){
-   if(card1.style.display === "none"){
-    card1.style.display = "block";
-   } else {
-    card1.style.display = "none";
-   }
-  } else if(randoDraw == 2){
-    if(card2.style.display === "none"){
-     card2.style.display = "block";
-    } else {
-     card2.style.display = "none";
-    }
-  } else if(randoDraw == 3){
-    if(card3.style.display === "none"){
-     card3.style.display = "block";
-    } else {
-     card3.style.display = "none";
-    }
-  } else if(randoDraw == 4){
-    if(card4.style.display === "none"){
-     card4.style.display = "block";
-    } else {
-     card4.style.display = "none";
-    }
-  } else if(randoDraw == 5){
-    if(card5.style.display === "none"){
-     card5.style.display = "block";
-    } else {
-     card5.style.display = "none";
-    }
-  } else if(randoDraw == 6){
-    if(card6.style.display === "none"){
-     card6.style.display = "block";
-    } else {
-     card6.style.display = "none";
-    }
-  }
-  if (cardButtons.style.display === "none") {
-    cardButtons.style.display = "flex";
-  }else {
-    cardButtons.style.display = "none";
-  }
-}
+// function drawCard() { //Currently working on, doesn't work properly
+//   let card1 = document.getElementById("cardD1");
+//   let card2 = document.getElementById("cardD2");
+//   let card3 = document.getElementById("cardD3");
+//   let card4 = document.getElementById("cardD4");
+//   let card5 = document.getElementById("cardD5");
+//   let card6 = document.getElementById("cardD6");
+//   let saveBut = document.getElementById("save");
+//   let useBut = document.getElementById("use");
+//   let randoDraw = 0;
+//   randoDraw = Math.floor(Math.random()*6)+1;
+//   console.log("Random draw is " + randoDraw);
+//   if(randoDraw == 1){
+//    if(card1.style.display === "none"){
+//     card1.style.display = "block";
+//    } else {
+//     card1.style.display = "none";
+//    }
+//   } else if(randoDraw == 2){
+//     if(card2.style.display === "none"){
+//      card2.style.display = "block";
+//     } else {
+//      card2.style.display = "none";
+//     }
+//   } else if(randoDraw == 3){
+//     if(card3.style.display === "none"){
+//      card3.style.display = "block";
+//     } else {
+//      card3.style.display = "none";
+//     }
+//   } else if(randoDraw == 4){
+//     if(card4.style.display === "none"){
+//      card4.style.display = "block";
+//     } else {
+//      card4.style.display = "none";
+//     }
+//   } else if(randoDraw == 5){
+//     if(card5.style.display === "none"){
+//      card5.style.display = "block";
+//     } else {
+//      card5.style.display = "none";
+//     }
+//   } else if(randoDraw == 6){ //its not disappearing bc 
+//     if(card6.style.display === "none"){
+//      card6.style.display = "block";
+//     } else {
+//      card6.style.display = "none"; //this else is making it only dis if you get 6 again
+//     }
+//   }
+//   if (saveBut.style.display === "none") {
+//     saveBut.style.display = "flex";
+//     useBut.style.display = "flex";
+//   }else {
+//     saveBut.style.display = "none";
+//     useBut.style.display = "none";
+//   }
+// }
 
 
 

@@ -101,7 +101,7 @@ h1 {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: rgb(220, 141, 141);
+    /* background-color: rgb(220, 141, 141); */
     width: 14em;
   }
 
@@ -112,6 +112,7 @@ h1 {
   .card5-player1 {
     width: 13%;
     height: 20%;
+    background-color: 0;
   }
 
   .card1-player2,
@@ -121,6 +122,7 @@ h1 {
   .card5-player2 {
     width: 13%;
     height: 20%;
+    background-color: 0;
   }
 
   .card1-player3,
@@ -130,6 +132,7 @@ h1 {
   .card5-player3 {
     width: 13%;
     height: 20%;
+    background-color: 0;
   }
 
   .card1-player4,
@@ -139,6 +142,7 @@ h1 {
   .card5-player4 {
     width: 13%;
     height: 20%;
+    background-color: 0;
   }
   
 /* THE ACTUAL GAME BOARD WHERE PLAYERS WILL PLAY */
@@ -427,6 +431,10 @@ background-size: cover;
     background-repeat: no-repeat, no-repeat;
 }
 
+/* .cardsDraw {
+    display: none;
+} */
+
 .cardDraw {
     background-color: gray;
     width: 10em;
@@ -434,6 +442,35 @@ background-size: cover;
     margin-left: 3em;
     margin-top: 2em;
     position: absolute;
+}
+
+#cardD1 {
+    background-color: aqua;
+    display: none;
+}
+
+#cardD2 {
+    background-color: rgb(51, 255, 0);
+    display: none;
+}
+
+#cardD3 {
+    background-color: rgb(255, 234, 0);
+    display: none;
+}
+
+#cardD4 {
+    background-color: rgb(255, 106, 0);
+    display: none;
+}
+
+#cardD5 {
+    background-color: rgb(255, 0, 208);
+    display: none;
+}
+
+#cardD6 {
+    background-color: rgb(255, 0, 0);
     display: none;
 }
 
@@ -449,16 +486,17 @@ background-size: cover;
 
 .save {
     background-color: rgb(214, 153, 153);
+    display: none;
 }
 
 .use {
     background-color: rgb(131, 131, 179);
+    display: none;
 }
 
 #cardButs {
     width: 4em;
     height: 4em;
-    display: none;
     justify-content: center;
     align-items: center;
     border: 0;
