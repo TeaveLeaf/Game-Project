@@ -23,7 +23,7 @@
     <div id="gamebrd" class="gameboard">
         <div id="startgm" class="startScreen">
             <audio id="menuButton1">
-                <source src="menu-click.mp3">
+                <source src="menu-click.mp3" type="audio/mpeg">
             </audio>
             <h1>Coin Party</h1>
             <label for="PlayerAmount">How many players are playing?</label>
@@ -206,6 +206,9 @@
         </div>
         <div id="board" class="board">
             <div class="diceStuff">
+                <audio id="dice-roll">
+                    <source src="dice-roll.mp3" type="audio/mpeg">
+                </audio>
                 <button id="dice" onclick="diceRoll()">Roll Dice</button>
                 <div class="diceRes">
                     <p id="diceShow" class="pb1">Move</p>
@@ -214,6 +217,9 @@
                 </div>
             </div>
             <div class="cardsDraw">
+                <audio id="cardDraw">
+                    <source src="card-draw.mp3" type="audio/mpeg">
+                </audio>
                 <div id="cardD1" class="cardDraw"></div>
                 <div id="cardD2" class="cardDraw"></div>
                 <div id="cardD3" class="cardDraw"></div>
