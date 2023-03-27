@@ -69,7 +69,9 @@ a:visited#navButton {
     font-size: 28px;
 }
 
-
+.dropdown:hover {
+    cursor: pointer;
+}
 
 
 .startScreen label {
@@ -81,6 +83,10 @@ a:visited#navButton {
     width: 7em;
     height: 2em;
     font-size: 28px;
+}
+
+#startGame:hover {
+    cursor: pointer;
 }
 
 
@@ -532,6 +538,7 @@ background-size: cover;
 .winlose {
     display: none;
     position: absolute;
+    flex-direction: column;
 }
 
 
@@ -544,6 +551,16 @@ background-size: cover;
 
 .winlosebg p {
     font-size: 33px;
+}
+
+.replayBut {
+    background-color: rgb(174, 119, 119);
+    height: 40px;
+}
+
+.replayBut:hover {
+    cursor: pointer;
+    background-color: rgb(144, 105, 105);
 }
 
 

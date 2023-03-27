@@ -148,11 +148,32 @@ function Pmovement() { //WORKS IT WORKS MOSTLY WOOHOO
   console.log("Purple has moved");
 
 
-  if(pCards >= 10){
+  if(pCards >= 50){
     console.log("PURPLE LOSES");
     document.getElementById("winlose").style.display = "flex";
 
-
+    if(pCards > oCards && pCards > gCards){
+      document.getElementById("third").innerHTML = "Player 1";
+    } else if(oCards > pCards && oCards > gCards){
+      document.getElementById("third").innerHTML = "Player 2";
+    } else if(gCards > oCards && gCards > pCards){
+      document.getElementById("third").innerHTML = "Player 3";
+    }
+    if(pCards > oCards && pCards < gCards || pCards > gCards && pCards < oCards){
+      document.getElementById("second").innerHTML = "Player 1";
+    } else if(gCards > oCards && gCards < pCards || gCards > pCards && gCards < oCards){
+      document.getElementById("second").innerHTML = "Player 2";
+    } else if(oCards > pCards && oCards < gCards || oCards > gCards && oCards < pCards){
+      document.getElementById("second").innerHTML = "Player 3";
+    }
+    if(pCards < oCards && pCards < gCards){
+      document.getElementById("first").innerHTML = "Player 1";
+    } else if(gCards < oCards && gCards < pCards){
+      document.getElementById("first").innerHTML = "Player 2";
+    } else if(oCards < pCards && oCards < gCards){
+      document.getElementById("first").innerHTML = "Player 3";
+    }
+    document.getElementById("dice").style.display = "none";
   }
 
 
@@ -212,9 +233,32 @@ function Omovement() {
   }
 
 
-  if(oCards >= 10){
+  if(oCards >= 50){
     console.log("ORANGE LOSES");
     document.getElementById("winlose").style.display = "flex";
+
+    if(pCards > oCards && pCards > gCards){
+      document.getElementById("third").innerHTML = "Player 1";
+    } else if(oCards > pCards && oCards > gCards){
+      document.getElementById("third").innerHTML = "Player 2";
+    } else if(gCards > oCards && gCards > pCards){
+      document.getElementById("third").innerHTML = "Player 3";
+    }
+    if(pCards > oCards && pCards < gCards || pCards > gCards && pCards < oCards){
+      document.getElementById("second").innerHTML = "Player 1";
+    } else if(gCards > oCards && gCards < pCards || gCards > pCards && gCards < oCards){
+      document.getElementById("second").innerHTML = "Player 3";
+    } else if(oCards > pCards && oCards < gCards || oCards > gCards && oCards < pCards){
+      document.getElementById("second").innerHTML = "Player 2";
+    }
+    if(pCards < oCards && pCards < gCards){
+      document.getElementById("first").innerHTML = "Player 1";
+    } else if(gCards < oCards && gCards < pCards){
+      document.getElementById("first").innerHTML = "Player 3";
+    } else if(oCards < pCards && oCards < gCards){
+      document.getElementById("first").innerHTML = "Player 2";
+    }
+    document.getElementById("dice").style.display = "none";
   }
  
   updateBoard();
@@ -257,18 +301,10 @@ function Gmovement() {
   turns = 0;
 
 
-  if(gCards >= 10){
+  if(gCards >= 50){
     console.log("GREEN LOSES");
     document.getElementById("winlose").style.display = "flex";
-  }
 
-
-  updateBoard();
-}
-
-
-function gameEnd(){
-  if(ais2 == "Yes"){
     if(pCards > oCards && pCards > gCards){
       document.getElementById("third").innerHTML = "Player 1";
     } else if(oCards > pCards && oCards > gCards){
@@ -290,19 +326,11 @@ function gameEnd(){
     } else if(oCards < pCards && oCards < gCards){
       document.getElementById("first").innerHTML = "Player 3";
     }
-  } else if(pCards > oCards){
-      document.getElementById("first").innerHTML = "Player 1";
-      document.getElementById("second").innerHTML = "Player 2";
-    } else if(oCards > pCards){
-      document.getElementById("first").innerHTML = "Player 2";
-      document.getElementById("second").innerHTML = "Player 1";
-   
-
-
-    winlose.style.display == "flex";
-    var third = document.getElementById("third");
-    third.style.display = "none";
+    document.getElementById("dice").style.display = "none";
   }
+
+
+  updateBoard();
 }
 
 
@@ -334,23 +362,6 @@ function visibility() {
     console.log("Game started");
     updateBoard();
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //Updates the board and moves players to their respective places
 function updateBoard() {
@@ -533,8 +544,6 @@ function visibility() {
     Dropdown();
     updateBoard();
 }
-
-
 
 
 //Card deck function -- not using
