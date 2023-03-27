@@ -232,7 +232,8 @@ h1 {
     display: flex;
 }
 
-#spot {
+/* Old Movement Spots */
+/*#spot {
     background-color: rgb(229, 192, 192);
     width: 2em;
     height: 2em;
@@ -375,7 +376,7 @@ h1 {
     width: 2em;
     height: 2em;
     border: 1px solid black;
-}
+}*/
 
 .board {
     box-sizing: border-box;
