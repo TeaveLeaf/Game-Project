@@ -1,25 +1,35 @@
 let boardData = [1,2,3,4,5,6,7,8];
 
+
 let cardsList = [1,2,3,4,5,6];
+
+
 
 
 let purpData = 0;
 let orangData = 0;
 
+
 let purpMove = 1;
 let purPos = 0;
 
+
 let orangMove = 1;
+
 
 let grenMove = 1;
 
+
 let toge = 0;
 
+
 let turns = 0;
+
 
 let pCards = 0;
 let oCards = 0;
 let gCards = 0;
+
 
 let c1 = document.getElementById("cell1");
 let c2 = document.getElementById("cell2");
@@ -33,14 +43,23 @@ let c8 = document.getElementById("cell8");
 
 
 
+
+
+
 //Sound that plays when the buttons and dropdown menus are clicked
+
+
+
 
 
 
 // <-- // Attempts at sound playing that did not work
 
 
+
+
 // let dropdownClick = document.getElementById(dropdown);
+
 
 // dropdown.addEventListener("click",'function'); {
 //   let selectedOption = dropdown.option;
@@ -51,16 +70,25 @@ let c8 = document.getElementById("cell8");
 
 
 
+
+
+
 function Dropdown (){
   var dropdownAI = document.getElementById("dropdownAI");
 var ais = dropdownAI.options[dropdownAI.selectedIndex].innerHTML;
 
+
 var dropdownPlayer = document.getElementById("dropdown");
 var playerdown = dropdown.options[dropdown.selectedIndex].innerHTML;
+
 
   console.log(playerdown + " players selected.");
   console.log(ais + ", AI selected.");
 }
+
+
+
+
 
 
 
@@ -87,6 +115,7 @@ function diceRoll(){
   }
 }
 
+
 function Pmovement() { //WORKS IT WORKS MOSTLY WOOHOO
   // console.log("hihi the num is " + num);
   // console.log("purpmove is " + purpMove);
@@ -111,21 +140,28 @@ function Pmovement() { //WORKS IT WORKS MOSTLY WOOHOO
     }
   }
 
+
   pCards = pCards + num;
   document.getElementById("p1Coins").innerHTML = pCards;
 
+
   console.log("Purple has moved");
+
 
   if(pCards >= 10){
     console.log("PURPLE LOSES");
     document.getElementById("winlose").style.display = "flex";
 
+
   }
+
 
   console.log("Purple's turn over");
   turns = 1;
   updateBoard();
 }
+
+
 
 
 function Omovement() {
@@ -152,13 +188,18 @@ function Omovement() {
     }
   }
 
+
   oCards = oCards + num;
   document.getElementById("p2Coins").innerHTML = oCards;
+
 
   console.log("Orange has moved");
 
 
+
+
   console.log("Orange's turn over");
+
 
   var dropdownAI = document.getElementById("dropdownAI");
   var ais = dropdownAI.options[dropdownAI.selectedIndex].innerHTML;
@@ -170,13 +211,15 @@ function Omovement() {
     turns = 0;
   }
 
+
   if(oCards >= 10){
     console.log("ORANGE LOSES");
     document.getElementById("winlose").style.display = "flex";
   }
-  
+ 
   updateBoard();
 }
+
 
 function Gmovement() {
   // console.log("hihi the num is " + num);
@@ -202,21 +245,27 @@ function Gmovement() {
     }
   }
 
+
   gCards = gCards + num;
   document.getElementById("p3Coins").innerHTML = gCards;
 
+
   console.log("Green has moved");
+
 
   console.log("Green's turn over");
   turns = 0;
+
 
   if(gCards >= 10){
     console.log("GREEN LOSES");
     document.getElementById("winlose").style.display = "flex";
   }
 
+
   updateBoard();
 }
+
 
 function gameEnd(){
   if(ais2 == "Yes"){
@@ -247,13 +296,15 @@ function gameEnd(){
     } else if(oCards > pCards){
       document.getElementById("first").innerHTML = "Player 2";
       document.getElementById("second").innerHTML = "Player 1";
-    
+   
+
 
     winlose.style.display == "flex";
     var third = document.getElementById("third");
     third.style.display = "none";
   }
 }
+
 
 function visible(){
   console.log("WHY");
@@ -265,6 +316,7 @@ function visible(){
   winlose.style.display == "flex";
   winlose2.style.display == "block";
 }
+
 
 //Function makes thingy appear and or disappear
 function visibility() {
@@ -291,6 +343,15 @@ function visibility() {
 
 
 
+
+
+
+
+
+
+
+
+
 //Updates the board and moves players to their respective places
 function updateBoard() {
   document.getElementById("cell1").className = "cell";
@@ -303,11 +364,13 @@ function updateBoard() {
   document.getElementById("cell8").className = "cell";
   console.log("LOOK AT IT MOVE");
 
+
   var ais = dropdownAI.options[dropdownAI.selectedIndex].innerHTML;
   console.log("PEOPLE SAID " + ais);
   if(ais == "No"){
     grenMove = 0;
   }
+
 
   if (purpMove == 1){
     document.getElementById("cell1").className = "cell purpal";
@@ -326,6 +389,7 @@ function updateBoard() {
   } else if (purpMove == 8){
     document.getElementById("cell8").className = "cell purpal";
   } else document.getElementsByClassName("cell").className = "cell";
+
 
   if (orangMove == 1){
     document.getElementById("cell1").className = "cell orang";
@@ -346,6 +410,8 @@ function updateBoard() {
   } else document.getElementsByClassName("cell").className = "cell";
 
 
+
+
   if (grenMove == 1){
     document.getElementById("cell1").className = "cell gren";
   } else if (grenMove == 2){
@@ -364,6 +430,7 @@ function updateBoard() {
     document.getElementById("cell8").className = "cell gren";
   } else document.getElementsByClassName("cell").className = "cell";
 
+
   if(purpMove == 1 && orangMove == 1) {
     document.getElementById("cell1").className = "cell purorang";
   } else if(purpMove == 2 && orangMove == 2) {
@@ -379,9 +446,71 @@ function updateBoard() {
   } else if(purpMove == 7 && orangMove == 7) {
     document.getElementById("cell7").className = "cell purorang";
   } else if(purpMove == 8 && orangMove == 8) {
-    document.getElementById("cell3").className = "cell purorang";
+    document.getElementById("cell8").className = "cell purorang";
+  }
+
+
+  if(grenMove == 1 && orangMove == 1) {
+    document.getElementById("cell1").className = "cell orangren";
+  } else if(grenMove == 2 && orangMove == 2) {
+    document.getElementById("cell2").className = "cell orangren";
+  } else if(grenMove == 3 && orangMove == 3) {
+    document.getElementById("cell3").className = "cell orangren";
+  } else if(grenMove == 4 && orangMove == 4) {
+    document.getElementById("cell4").className = "cell orangren";
+  } else if(grenMove == 5 && orangMove == 5) {
+    document.getElementById("cell5").className = "cell orangren";
+  } else if(grenMove == 6 && orangMove == 6) {
+    document.getElementById("cell6").className = "cell orangren";
+  } else if(grenMove == 7 && orangMove == 7) {
+    document.getElementById("cell7").className = "cell orangren";
+  } else if(grenMove == 8 && orangMove == 8) {
+    document.getElementById("cell8").className = "cell orangren";
+  }
+
+
+  if(purpMove == 1 && grenMove == 1) {
+    document.getElementById("cell1").className = "cell purpgren";
+  } else if(purpMove == 2 && grenMove == 2) {
+    document.getElementById("cell2").className = "cell purpgren";
+  } else if(purpMove == 3 && grenMove == 3) {
+    document.getElementById("cell3").className = "cell purpgren";
+  } else if(purpMove == 4 && grenMove == 4) {
+    document.getElementById("cell4").className = "cell purpgren";
+  } else if(purpMove == 5 && grenMove == 5) {
+    document.getElementById("cell5").className = "cell purpgren";
+  } else if(purpMove == 6 && grenMove == 6) {
+    document.getElementById("cell6").className = "cell purpgren";
+  } else if(purpMove == 7 && grenMove == 7) {
+    document.getElementById("cell7").className = "cell purpgren";
+  } else if(purpMove == 8 && grenMove == 8) {
+    document.getElementById("cell8").className = "cell purpgren";
+  }
+
+
+
+
+  if(purpMove == 1 && orangMove == 1 && grenMove == 1) {
+    document.getElementById("cell1").className = "cell purorangren";
+  } else if(purpMove == 2 && orangMove == 2 && grenMove == 2) {
+    document.getElementById("cell2").className = "cell purorangren";
+  } else if(purpMove == 3 && orangMove == 3 && grenMove == 3) {
+    document.getElementById("cell3").className = "cell purorangren";
+  } else if(purpMove == 4 && orangMove == 4 && grenMove == 4) {
+    document.getElementById("cell4").className = "cell purorangren";
+  } else if(purpMove == 5 && orangMove == 5 && grenMove == 5) {
+    document.getElementById("cell5").className = "cell purorangren";
+  } else if(purpMove == 6 && orangMove == 6 && grenMove == 6) {
+    document.getElementById("cell6").className = "cell purorangren";
+  } else if(purpMove == 7 && orangMove == 7 && grenMove == 7) {
+    document.getElementById("cell7").className = "cell purorangren";
+  } else if(purpMove == 8 && orangMove == 8 && grenMove == 8) {
+    document.getElementById("cell8").className = "cell purorangren";
   }
 }
+
+
+
 
 
 
@@ -404,6 +533,8 @@ function visibility() {
     Dropdown();
     updateBoard();
 }
+
+
 
 
 //Card deck function -- not using
@@ -448,6 +579,9 @@ function cardDeck(){
       }
     }
 }
+
+
+
 
 
 
@@ -496,7 +630,7 @@ function cardDeck(){
 //     } else {
 //      card5.style.display = "none";
 //     }
-//   } else if(randoDraw == 6){ //its not disappearing bc 
+//   } else if(randoDraw == 6){ //its not disappearing bc
 //     if(card6.style.display === "none"){
 //      card6.style.display = "block";
 //     } else {

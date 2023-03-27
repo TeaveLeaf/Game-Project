@@ -6,6 +6,8 @@
 }
 
 
+
+
 /* NAV BAR */
 nav {
     background-color: rgb(143, 143, 255);
@@ -13,6 +15,7 @@ nav {
     height: 80px;
     position: fixed;
 }
+
 
 .navButtons {
     background-color: rgb(143, 143, 255);
@@ -24,6 +27,7 @@ nav {
     top: 0;
 }
 
+
 #navButton {
     border: 0;
     background-color: transparent;
@@ -34,13 +38,17 @@ nav {
     margin-top: 2.5%;
 }
 
+
 a:hover#navButton {
     text-decoration: underline;
 }
 
+
 a:visited#navButton {
     color: black;
 }
+
+
 
 
 /* START SCREEN */
@@ -55,15 +63,19 @@ a:visited#navButton {
     line-height: 6em;
 }
 
+
 .startScreen .dropdown{
     width: 80px;
     font-size: 28px;
 }
 
 
+
+
 .startScreen label {
     font-size: 36px;
 }
+
 
 #startGame {
     width: 7em;
@@ -71,12 +83,16 @@ a:visited#navButton {
     font-size: 28px;
 }
 
+
 #space {
     height: 50px;
 }
 
 
+
+
 /* GAME BOARD */
+
 
 /* PLAYER BOARD TO KEEP TRACK OF THE SCORE AND CARDS */
 .playerboard {
@@ -88,15 +104,18 @@ a:visited#navButton {
     justify-content: space-around;
 }
 
+
 h1 {
     font-size: 60px;
 }
+
 
 /* CARDS FOR EACH PLAYER */
 #container1 {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border: 1px solid black;
   }
+
 
   .cards {
     display: flex;
@@ -105,6 +124,7 @@ h1 {
     /* background-color: rgb(220, 141, 141); */
     width: 14em;
   }
+
 
   .card1-player1,
   .card2-player1,
@@ -116,6 +136,7 @@ h1 {
     background-color: 0;
   }
 
+
   .card1-player2,
   .card2-player2,
   .card3-player2,
@@ -125,6 +146,7 @@ h1 {
     height: 20%;
     background-color: 0;
   }
+
 
   .card1-player3,
   .card2-player3,
@@ -136,6 +158,7 @@ h1 {
     background-color: 0;
   }
 
+
   .card1-player4,
   .card2-player4,
   .card3-player4,
@@ -145,7 +168,7 @@ h1 {
     height: 20%;
     background-color: 0;
   }
-  
+ 
 /* THE ACTUAL GAME BOARD WHERE PLAYERS WILL PLAY */
 .board {
     background-color: rgb(167, 142, 190);
@@ -153,6 +176,7 @@ h1 {
     height: 48em;
     display: none;
 }
+
 
 .gameboard {
     background-color: rgb(238, 167, 167);
@@ -163,16 +187,19 @@ h1 {
     padding-top: 6%;
 }
 
+
 #dice {
     width: 7em;
     height: 6em;
 }
+
 
 .diceRes {
     background-color: aqua;
     width: 5em;
     height: 5em;
 }
+
 
 .pb1,
 .pb2,
@@ -181,12 +208,14 @@ h1 {
     padding-top: 0.3em;
 }
 
+
 .coins {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 27%;
 }
+
 
 .cardsNum {
     display: flex;
@@ -195,11 +224,13 @@ h1 {
     width: 27%;
 }
 
+
 /* REMOVED but im keeping it just in case */
 /* .cardStuff {
     /* padding-top: 13.8%;
     position: absolute;
 }
+
 
 .cardDisplay {
     width: 10em;
@@ -208,38 +239,44 @@ h1 {
     display: none;
 }
 
+
 .card1 {
     background-color: rgb(129, 129, 188);
     display: none;
 }
+
 
 .card2 {
     background-color: rgb(132, 188, 129);
     display: none;
 }
 
+
 .card3 {
     background-color: rgb(188, 155, 129);
     display: none;
 }
+
 
 #cardDeck {
     width: 15em;
     height: 25em;
 } */
 
+
 /* GAME SPACES/SPOTS */
 .pathway {
     display: flex;
 }
 
-/* Old Movement Spots */
-/*#spot {
+
+#spot {
     background-color: rgb(229, 192, 192);
     width: 2em;
     height: 2em;
     border: 1px solid black;
 }
+
 
 #spot2 {
     background-color: rgb(192, 199, 229);
@@ -248,12 +285,14 @@ h1 {
     border: 1px solid black;
 }
 
+
 #spot3 {
     background-color:darksalmon;
     width: 2em;
     height: 2em;
     border: 1px solid black;
 }
+
 
 .row1 {
     display: flex;
@@ -264,6 +303,7 @@ h1 {
     top: 42em;
 }
 
+
 .row2 {
     display: flex;
     flex-direction: row;
@@ -272,6 +312,7 @@ h1 {
     right: 15.3em;
     top: 58.8em;
 }
+
 
 .row3 {
     display: flex;
@@ -282,6 +323,7 @@ h1 {
     top: 42em;
 }
 
+
 .row4 {
     display: flex;
     flex-direction: column;
@@ -290,6 +332,7 @@ h1 {
     left: 47em;
     bottom: 5.24em;
 }
+
 
 .row5 {
     display: flex;
@@ -300,6 +343,7 @@ h1 {
     bottom:22.03em;
 }
 
+
 .row6 {
     display: flex;
     flex-direction: column;
@@ -308,6 +352,7 @@ h1 {
     left: 42.8em;
     bottom: 22.03em;
 }
+
 
 .row7 {
     display: flex;
@@ -318,6 +363,7 @@ h1 {
     bottom: 28.33em;
 }
 
+
 .row8 {
     display: flex;
     flex-direction: column;
@@ -326,6 +372,7 @@ h1 {
     left: 26em;
     bottom: 30.45em;
 }
+
 
 .row9 {
     display: flex;
@@ -336,6 +383,7 @@ h1 {
     bottom: 30.45em;
 }
 
+
 .row10 {
     display: flex;
     flex-direction: row;
@@ -344,6 +392,7 @@ h1 {
     left: 28.1em;
     bottom: 34.65em;
 }
+
 
 .row11 {
     display: flex;
@@ -354,6 +403,7 @@ h1 {
     bottom: 7.35em;
 }
 
+
 .row12 {
     display: flex;
     flex-direction: row;
@@ -362,6 +412,7 @@ h1 {
     left: 49.1em;
     bottom: 15.75em;
 }
+
 
 .row13 {
     display: flex;
@@ -372,16 +423,19 @@ h1 {
     bottom: 17.85em;
 }
 
+
 .startSpot {
     background-color: red;
     width: 2em;
     height: 2em;
     border: 1px solid black;
-}*/
+}
+
 
 .board {
     box-sizing: border-box;
 }
+
 
 .pathway {
     /* background-color: rgb(227, 176, 176); */
@@ -391,23 +445,26 @@ h1 {
     box-sizing: border-box;
 }
 
+
 .testBoard {
     /* box-sizing: border-box; */
-width: 450px;
-height: 450px;
+width: 320px;
+height: 320px;
 background-color: rgb(241, 230, 230);
 display: grid;
-grid-template-columns: repeat(7,1fr);
-grid-template-rows: repeat(7, 1fr);
+grid-template-columns: repeat(3,1fr);
+grid-template-rows: repeat(3, 1fr);
 gap: 2px;
 /* box-shadow: 0 0 15pc 5px rgba(50,50,50,0.5); */
-background-image: url(largeGrid.png);
+background-image: url(grid.png);
 background-size: cover;
 }
+
 
 /* .testBoard:hover {
     cursor: pointer;
 } */
+
 
 /* PLAYER STUFF */
 .purpal {
@@ -417,6 +474,7 @@ background-size: cover;
     background-repeat: no-repeat;
 }
 
+
 .orang {
     background-image: url(orang.png);
     background-size: 20%;
@@ -424,6 +482,7 @@ background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
+
 
 .gren {
     background-image: url(gren.png);
@@ -433,6 +492,7 @@ background-size: cover;
     background-repeat: no-repeat;
 }
 
+
 .purorang {
     background-image: url(purp.png), url(orang.png);
     background-size: 20%;
@@ -440,6 +500,7 @@ background-size: cover;
     background-position: center top, center bottom;
     background-repeat: no-repeat, no-repeat;
 }
+
 
 .purorangren {
     background-image: url(purp.png), url(orang.png), url(gren.png);
@@ -449,6 +510,7 @@ background-size: cover;
     background-repeat: no-repeat, no-repeat, no-repeat;
 }
 
+
 .orangren {
     background-image: url(gren.png), url(orang.png);
     background-size: 20%;
@@ -456,6 +518,7 @@ background-size: cover;
     background-position: center top, center bottom;
     background-repeat: no-repeat, no-repeat;
 }
+
 
 .purpgren {
     background-image: url(purp.png), url(gren.png);
@@ -465,10 +528,12 @@ background-size: cover;
     background-repeat: no-repeat, no-repeat;
 }
 
+
 .winlose {
     display: none;
     position: absolute;
 }
+
 
 .winlosebg {
     background-color: rgb(163, 124, 73);
@@ -476,15 +541,20 @@ background-size: cover;
     height: auto;
 }
 
+
 .winlosebg p {
     font-size: 33px;
 }
 
 
 
+
+
+
 /* .cardsDraw {
     display: none;
 } */
+
 
 .cardDraw {
     background-color: gray;
@@ -495,35 +565,42 @@ background-size: cover;
     position: absolute;
 }
 
+
 #cardD1 {
     background-color: aqua;
     display: none;
 }
+
 
 #cardD2 {
     background-color: rgb(51, 255, 0);
     display: none;
 }
 
+
 #cardD3 {
     background-color: rgb(255, 234, 0);
     display: none;
 }
+
 
 #cardD4 {
     background-color: rgb(255, 106, 0);
     display: none;
 }
 
+
 #cardD5 {
     background-color: rgb(255, 0, 208);
     display: none;
 }
 
+
 #cardD6 {
     background-color: rgb(255, 0, 0);
     display: none;
 }
+
 
 .cbContainer {
     display: flex;
@@ -535,15 +612,18 @@ background-size: cover;
     margin-top: 18em;
 }
 
+
 .save {
     background-color: rgb(214, 153, 153);
     display: none;
 }
 
+
 .use {
     background-color: rgb(131, 131, 179);
     display: none;
 }
+
 
 #cardButs {
     width: 4em;
@@ -554,14 +634,20 @@ background-size: cover;
 }
 
 
+
+
 /* MAKING THE MOUSE DO POINTER STUFF */
 #cardButs:hover{
     cursor: pointer;
 }
 
+
 #dice:hover{
     cursor: pointer;
 }
+
+
+
 
 
 
@@ -574,13 +660,17 @@ background-size: cover;
     margin-left: 10%;
 }
 
+
 .faqContent {
     margin-bottom: 10em;
 }
 
+
 li {
     margin: 2%;
 }
+
+
 
 
 /* TESTS */
@@ -590,9 +680,11 @@ li {
     background-color: rgb(212, 139, 139);
 }
 
+
 .test:hover {
     background-color: rgb(148, 111, 111);
 }
+
 
 .test2 {
     width: 50px;
@@ -600,9 +692,11 @@ li {
     background-color: rgb(136, 153, 210);
 }
 
+
 .test2:hover {
     background-color: rgb(111, 118, 148);
 }
+
 
 /* .test3 {
     background-color: aqua;
