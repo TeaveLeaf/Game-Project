@@ -330,16 +330,16 @@ function updateBoard() {
   } else if(purpMove == 3 && orangMove == 3) {
     document.getElementById("cell3").className = "cell purorang";
   } else if(purpMove == 4 && orangMove == 4) {
-    document.getElementById("cell3").className = "cell purorang";
+    document.getElementById("cell4").className = "cell purorang";
   } else if(purpMove == 5 && orangMove == 5) {
-    document.getElementById("cell3").className = "cell purorang";
+    document.getElementById("cell5").className = "cell purorang";
   } else if(purpMove == 6 && orangMove == 6) {
-    document.getElementById("cell3").className = "cell purorang";
+    document.getElementById("cell6").className = "cell purorang";
   } else if(purpMove == 7 && orangMove == 7) {
-    document.getElementById("cell3").className = "cell purorang";
+    document.getElementById("cell7").className = "cell purorang";
   } else if(purpMove == 8 && orangMove == 8) {
-    document.getElementById("cell3").className = "cell purorang";
-  }
+    document.getElementById("cell8").className = "cell purorang";
+  } else document.getElementsByClassName("cell").className = "cell";
 }
 
 
