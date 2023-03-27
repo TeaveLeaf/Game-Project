@@ -185,7 +185,7 @@ h1 {
 
 
 .gameboard {
-    background-color: rgb(238, 167, 167);
+    /* background-color: rgb(238, 167, 167); */
     width: 90%;
     height: 55em;
     margin-left: 5%;
