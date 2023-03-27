@@ -55,10 +55,11 @@ a:visited#navButton {
     line-height: 6em;
 }
 
-.startScreen #dropdown {
+.startScreen .dropdown{
     width: 80px;
     font-size: 28px;
 }
+
 
 .startScreen label {
     font-size: 36px;
@@ -423,6 +424,14 @@ background-size: cover;
     background-repeat: no-repeat;
 }
 
+.gren {
+    background-image: url(gren.png);
+    background-size: 20%;
+    margin-top: 28px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .purorang {
     background-image: url(purp.png), url(orang.png);
     background-size: 20%;
@@ -430,6 +439,47 @@ background-size: cover;
     background-position: center top, center bottom;
     background-repeat: no-repeat, no-repeat;
 }
+
+.purorangren {
+    background-image: url(purp.png), url(orang.png), url(gren.png);
+    background-size: 20%;
+    height: 50%;
+    background-position: center top, center bottom, right;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+}
+
+.orangren {
+    background-image: url(gren.png), url(orang.png);
+    background-size: 20%;
+    height: 50%;
+    background-position: center top, center bottom;
+    background-repeat: no-repeat, no-repeat;
+}
+
+.purpgren {
+    background-image: url(purp.png), url(gren.png);
+    background-size: 20%;
+    height: 50%;
+    background-position: center top, center bottom;
+    background-repeat: no-repeat, no-repeat;
+}
+
+.winlose {
+    display: none;
+    position: absolute;
+}
+
+.winlosebg {
+    background-color: rgb(163, 124, 73);
+    width: 15em;
+    height: auto;
+}
+
+.winlosebg p {
+    font-size: 33px;
+}
+
+
 
 /* .cardsDraw {
     display: none;

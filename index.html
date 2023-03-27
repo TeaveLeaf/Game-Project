@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="#">
     <script src="app.js"></script>
-    <script src="tile.js"></script>
-    <script src="player.js"></script>
 
     <title>Coin Party</title>
 </head>
@@ -26,16 +24,16 @@
                 <source src="menu-click.mp3" type="audio/mpeg">
             </audio>
             <h1>Coin Party</h1>
-            <label for="PlayerAmount">How many players are playing?</label>
+            <label for="PlayerAmount">How many real life players are playing?</label>
             <p>Currently only 2 can play</p>
-            <select name="PlayerAmount" id="dropdown">
+            <select name="PlayerAmount" id="dropdown" class="dropdown">
                 <option>2</option>
                 <option>3</option>
                 <option>4</option>
             </select>
             <label for="AIoption">Would you like to play with AI players?</label>
-            <p>AI not available yet</p>
-            <select name="AIoption" id="dropdown">
+            <p>Currently only 1 AI available</p>
+            <select name="AIoption" id="dropdownAI" class="dropdown">
                 <option>Yes</option>
                 <option>No</option>
             </select>
@@ -244,141 +242,15 @@
                 <button id="cardDeck" onclick="cardDeck()">Card Deck</button>
             </div> -->
             <section class="pathway">
-                <!-- <div class="row1">
-                    <div id="spot2" class="spot1"></div>
-                    <div id="spot" class="spot2"></div>
-                    <div id="spot2" class="spot3"></div>
-                    <div id="spot" class="spot4"></div>
-                    <div id="spot2" class="spot5"></div>
-                    <div id="spot" class="spot6"></div>
-                    <div id="spot2" class="spot7"></div>
-                    <div id="spot" class="spot8"></div>
-                    <div id="starting" class="startSpot"></div>
+                <div id="winlose" class="winlose">
+                    <div class="winlosebg">
+                        <p>GAME OVER!</p>
+                        <p>1st place - </p> <p id="first">PLAYER</p>
+                        <p>2nd place - </p> <p id="second">PLAYER</p>
+                        <p>3rd place - </p> <p id="third">PLAYER</p>
+                    </div>
                 </div>
-                <div class="row2">
-                    <div id="spot" class="spot12"></div>
-                    <div id="spot2" class="spot13"></div>
-                    <div id="spot" class="spot14"></div>
-                    <div id="spot2" class="spot15"></div>
-                    <div id="spot" class="spot16"></div>
-                    <div id="spot2" class="spot17"></div>
-                    <div id="spot" class="spot18"></div>
-                    <div id="spot2" class="spot19"></div>
-                    <div id="spot" class="spot20"></div>
-                    <div id="spot2" class="spot21"></div>
-                </div>
-                <div class="row3">
-                    <div id="spot2" class="spot22"></div>
-                    <div id="spot" class="spot23"></div>
-                    <div id="spot2" class="spot24"></div>
-                    <div id="spot" class="spot25"></div>
-                    <div id="spot2" class="spot26"></div>
-                    <div id="spot" class="spot27"></div>
-                    <div id="spot2" class="spot28"></div>
-                    <div id="spot" class="spot29"></div>
-                    <div id="spot2" class="spot30"></div>
-                    <div id="spot" class="spot31"></div>
-                </div>
-                <div class="row4">
-                    <div id="spot" class="spot32"></div>
-                    <div id="spot2" class="spot33"></div>
-                    <div id="spot" class="spot34"></div>
-                    <div id="spot2" class="spot35"></div>
-                    <div id="spot" class="spot36"></div>
-                    <div id="spot2" class="spot37"></div>
-                    <div id="spot" class="spot38"></div>
-                </div>
-                <div class="row5">
-                    <div id="spot" class="spot39"></div>
-                    <div id="spot2" class="spot40"></div>
-                    <div id="spot" class="spot41"></div>
-                </div>
-                <div class="row6">
-                    <div id="spot" class="spot42"></div>
-                    <div id="spot2" class="spot43"></div>
-                    <div id="spot" class="spot44"></div>
-                </div>
-                <div class="row7">
-                    <div id="spot2" class="spot45"></div>
-                    <div id="spot" class="spot46"></div>
-                    <div id="spot2" class="spot47"></div>
-                    <div id="spot" class="spot48"></div>
-                    <div id="spot2" class="spot49"></div>
-                    <div id="spot" class="spot50"></div>
-                    <div id="spot2" class="spot51"></div>
-                    <div id="spot" class="spot52"></div>
-                    <div id="spot2" class="spot53"></div>
-                    <div id="spot" class="spot54"></div>
-                    <div id="spot2" class="spot55"></div>
-                </div>
-                <div class="row8">
-                    <div id="spot" class="spot56"></div>
-                    <div id="spot2" class="spot57"></div>
-                    <div id="spot" class="spot58"></div>
-                </div>
-                <div class="row9">
-                    <div id="spot2" class="spot59"></div>
-                    <div id="spot" class="spot60"></div>
-                </div>
-                <div class="row10">
-                    <div id="spot2" class="spot61"></div>
-                    <div id="spot" class="spot62"></div>
-                    <div id="spot2" class="spot63"></div>
-                    <div id="spot" class="spot64"></div>
-                    <div id="spot2" class="spot65"></div>
-                    <div id="spot" class="spot66"></div>
-                    <div id="spot2" class="spot67"></div>
-                    <div id="spot" class="spot68"></div>
-                    <div id="spot2" class="spot69"></div>
-                    <div id="spot" class="spot70"></div>
-                    <div id="spot2" class="spot71"></div>
-                    <div id="spot" class="spot72"></div>
-                    <div id="spot2" class="spot73"></div>
-                    <div id="spot" class="spot74"></div>
-                    <div id="spot2" class="spot75"></div>
-                    <div id="spot" class="spot76"></div>
-                    <div id="spot2" class="spot77"></div>
-                    <div id="spot" class="spot78"></div>
-                    <div id="spot2" class="spot79"></div>
-                    <div id="spot" class="spot80"></div>
-                    <div id="spot2" class="spot81"></div>
-                </div>
-                <div class="row11">
-                    <div id="spot" class="spot82"></div>
-                    <div id="spot2" class="spot83"></div>
-                    <div id="spot" class="spot84"></div>
-                    <div id="spot2" class="spot85"></div>
-                    <div id="spot" class="spot86"></div>
-                    <div id="spot2" class="spot87"></div>
-                    <div id="spot" class="spot88"></div>
-                    <div id="spot2" class="spot89"></div>
-                    <div id="spot" class="spot90"></div>
-                    <div id="spot2" class="spot91"></div>
-                    <div id="spot" class="spot92"></div>
-                </div>
-                <div class="row12">
-                    <div id="spot" class="spot93"></div>
-                    <div id="spot2" class="spot94"></div>
-                    <div id="spot" class="spot95"></div>
-                    <div id="spot2" class="spot96"></div>
-                    <div id="spot" class="spot97"></div>
-                    <div id="spot2" class="spot98"></div>
-                    <div id="spot" class="spot99"></div>
-                    <div id="spot2" class="spot100"></div>
-                    <div id="spot" class="spot101"></div>
-                    <div id="spot2" class="spot102"></div>
-                    <div id="spot" class="spot103"></div>
-                </div>
-                <div class="row13">
-                    <div id="spot2" class="spot104"></div>
-                    <div id="spot" class="spot105"></div>
-                    <div id="spot2" class="spot106"></div>
-                    <div id="spot" class="spot107"></div>
-                    <div id="spot2" class="spot108"></div>
-                    <div id="spot" class="spot109"></div>
-                    <div id="spot2" class="spot110"></div>
-                    <div id="spot" class="spot111"></div>
-                </div> -->
+
                 <div id="testBoard" class="testBoard">
                     <div id="cell1" class="cell"></div>
                     <div id="cell2" class="cell"></div>
@@ -423,9 +295,9 @@
         </div>
     </div>
 
-    <div id="testy" class="test"></div>
+    <!-- <div id="testy" class="test"></div>
     <div id="testy2" class="test2"></div>
-    <div id="testy3" class="test3"></div>
+    <div id="testy3" class="test3"></div> -->
 
 
 </body>
