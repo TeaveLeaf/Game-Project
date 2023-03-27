@@ -379,62 +379,7 @@ function updateBoard() {
   } else if(purpMove == 7 && orangMove == 7) {
     document.getElementById("cell7").className = "cell purorang";
   } else if(purpMove == 8 && orangMove == 8) {
-    document.getElementById("cell8").className = "cell purorang";
-  }
-
-  if(grenMove == 1 && orangMove == 1) {
-    document.getElementById("cell1").className = "cell orangren";
-  } else if(grenMove == 2 && orangMove == 2) {
-    document.getElementById("cell2").className = "cell orangren";
-  } else if(grenMove == 3 && orangMove == 3) {
-    document.getElementById("cell3").className = "cell orangren";
-  } else if(grenMove == 4 && orangMove == 4) {
-    document.getElementById("cell4").className = "cell orangren";
-  } else if(grenMove == 5 && orangMove == 5) {
-    document.getElementById("cell5").className = "cell orangren";
-  } else if(grenMove == 6 && orangMove == 6) {
-    document.getElementById("cell6").className = "cell orangren";
-  } else if(grenMove == 7 && orangMove == 7) {
-    document.getElementById("cell7").className = "cell orangren";
-  } else if(grenMove == 8 && orangMove == 8) {
-    document.getElementById("cell8").className = "cell orangren";
-  }
-
-  if(purpMove == 1 && grenMove == 1) {
-    document.getElementById("cell1").className = "cell purpgren";
-  } else if(purpMove == 2 && grenMove == 2) {
-    document.getElementById("cell2").className = "cell purpgren";
-  } else if(purpMove == 3 && grenMove == 3) {
-    document.getElementById("cell3").className = "cell purpgren";
-  } else if(purpMove == 4 && grenMove == 4) {
-    document.getElementById("cell4").className = "cell purpgren";
-  } else if(purpMove == 5 && grenMove == 5) {
-    document.getElementById("cell5").className = "cell purpgren";
-  } else if(purpMove == 6 && grenMove == 6) {
-    document.getElementById("cell6").className = "cell purpgren";
-  } else if(purpMove == 7 && grenMove == 7) {
-    document.getElementById("cell7").className = "cell purpgren";
-  } else if(purpMove == 8 && grenMove == 8) {
-    document.getElementById("cell8").className = "cell purpgren";
-  }
-
-
-  if(purpMove == 1 && orangMove == 1 && grenMove == 1) {
-    document.getElementById("cell1").className = "cell purorangren";
-  } else if(purpMove == 2 && orangMove == 2 && grenMove == 2) {
-    document.getElementById("cell2").className = "cell purorangren";
-  } else if(purpMove == 3 && orangMove == 3 && grenMove == 3) {
-    document.getElementById("cell3").className = "cell purorangren";
-  } else if(purpMove == 4 && orangMove == 4 && grenMove == 4) {
-    document.getElementById("cell4").className = "cell purorangren";
-  } else if(purpMove == 5 && orangMove == 5 && grenMove == 5) {
-    document.getElementById("cell5").className = "cell purorangren";
-  } else if(purpMove == 6 && orangMove == 6 && grenMove == 6) {
-    document.getElementById("cell6").className = "cell purorangren";
-  } else if(purpMove == 7 && orangMove == 7 && grenMove == 7) {
-    document.getElementById("cell7").className = "cell purorangren";
-  } else if(purpMove == 8 && orangMove == 8 && grenMove == 8) {
-    document.getElementById("cell8").className = "cell purorangren";
+    document.getElementById("cell3").className = "cell purorang";
   }
 }
 

@@ -233,7 +233,8 @@ h1 {
     display: flex;
 }
 
-#spot {
+/* Old Movement Spots */
+/*#spot {
     background-color: rgb(229, 192, 192);
     width: 2em;
     height: 2em;
@@ -376,7 +377,7 @@ h1 {
     width: 2em;
     height: 2em;
     border: 1px solid black;
-}
+}*/
 
 .board {
     box-sizing: border-box;
@@ -392,15 +393,15 @@ h1 {
 
 .testBoard {
     /* box-sizing: border-box; */
-width: 320px;
-height: 320px;
+width: 450px;
+height: 450px;
 background-color: rgb(241, 230, 230);
 display: grid;
-grid-template-columns: repeat(3,1fr);
-grid-template-rows: repeat(3, 1fr);
+grid-template-columns: repeat(7,1fr);
+grid-template-rows: repeat(7, 1fr);
 gap: 2px;
 /* box-shadow: 0 0 15pc 5px rgba(50,50,50,0.5); */
-background-image: url(grid.png);
+background-image: url(largeGrid.png);
 background-size: cover;
 }
 
